@@ -1,0 +1,33 @@
+{
+  "name": "adpot-me",
+  "version": "1.0.0",
+  "description": "A step-by-step guide of a React course (2020) with the main tips from the Frontend Masters course: https://frontendmasters.com/courses/complete-react-v5/",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manukempo/guide-react-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manukempo/guide-react-2020/issues"
+  },
+  "homepage": "https://github.com/manukempo/guide-react-2020#readme",
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
