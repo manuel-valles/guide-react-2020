@@ -33,6 +33,8 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
      - $ npm i -D eslint eslint-config-prettier
      - Install extra packages for VSCode/ESLint to understand jsx files:
         - $ npm i -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
+     - Install an ESLint plugin to deal with Hooks: 
+        - $ npm i -D eslint-plugin-react-hooks
      - Create **.eslintrc.json**
      ```json
      {
@@ -46,9 +48,11 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         ],
         "rules":{
             "react/prop-types": 0,
-            "no-console": 1
+            "no-console": 1,
+            "react-hooks/rules-of-hooks": 2,
+            "react-hooks/exhaustive-deps": 1
         },
-        "plugins": ["react", "import", "jsx-a11y"],
+        "plugins": ["react", "import", "jsx-a11y", "react-hooks"],
         "parserOptions": {
             "ecmaVersion": 2018,
             "sourceType": "module",
@@ -92,10 +96,21 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         - This *parcel* can be found on node_modules/.bin/
         - $ npm run dev
             - Go to: http://localhost:1234 
+        - It also installs any package dectected from imports. For example:
+            - ```javascript
+                import { ANIMALS } from '@frontendmasters/pet';
+              ```
+            - ```json 
+                "@frontendmasters/pet": "^1.0.3" 
+              ```
     - **React & ReactDOM**
         - $ npm i react react-dom
 4. JSX
-5. 
+5. Hooks:
+    - Anything started by 'use', such as useState and useEffect;
+    - It's a destructuring array where the first one is the default value and the second is an updater function. e.g: [location, setLocation];
+    - It should never go inside an if statement;
+
 
 
 
