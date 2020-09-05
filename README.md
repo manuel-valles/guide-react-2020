@@ -31,21 +31,39 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
        - Create **.prettierrc** with an empty object (it will apply any config to the files every time you save them)
    - **ESLint**:
      - $ npm i -D eslint eslint-config-prettier
+     - Install extra packages for VSCode/ESLint to understand jsx files:
+        - $ npm i -D babel-eslint eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
      - Create **.eslintrc.json**
      ```json
      {
-        "extends": ["eslint:recommended", "prettier", "prettier/react"],
-        "plugins": [],
+        "extends": [
+            "eslint:recommended",
+            "plugin:import/errors",
+            "plugin:react/recommended",
+            "plugin:jsx-a11y/recommended", 
+            "prettier", 
+            "prettier/react"
+        ],
+        "rules":{
+            "react/prop-types": 0,
+            "no-console": 1
+        },
+        "plugins": ["react", "import", "jsx-a11y"],
         "parserOptions": {
             "ecmaVersion": 2018,
             "sourceType": "module",
             "ecmaFeatures": {
                 "jsx": true
-            },
-            "env": {
-                "es6": true,
-                "browser": true,
-                "node": true
+            }
+        },
+        "env": {
+            "es6": true,
+            "browser": true,
+            "node": true
+        },
+        "settings": {
+            "react": {
+                "version": "detect"
             }
         }
      } 
@@ -76,7 +94,8 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
             - Go to: http://localhost:1234 
     - **React & ReactDOM**
         - $ npm i react react-dom
-
+4. JSX
+5. 
 
 
 
