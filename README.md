@@ -118,7 +118,7 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
 
 7. Dev Tools:
     - Parcel takes care of the variable NODE_ENV. Development is like 4x larger and 40x slower than production;
-    - Strict Mode (<React.StrictMode></React.StrictMode>) helps you to feature prove your app, like not allowing to use things that will be sooned be deprecated. It can be 
+    - Strict Mode (<React.StrictMode></React.StrictMode>) helps you to feature prove your app, like not allowing to use things that will be sooned be deprecated. It can be used just in sole components. 
     ```javascript
     const App = () => {
         return (
@@ -131,6 +131,21 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         );
     };
     ```
+
+8. Async & Rotuing:
+    - Add the property 'browserlist' to the package.json, so Parcel won't use Babel to translate our async/await calls.
+    ```json
+    {
+        "browserslist": ["last 2 Chrome versions"]
+    }
+    ```
+    -  In order to run in offline mode, just make sure that PET_MOCK=mock is in your environmental variables:
+        - $ npm install -D cross-env;
+        - Add this to your package.json's scripts:
+        ```json
+        "dev:mock": "cross-env PET_MOCK=mock npm run dev"
+        ```
+        - If it doesn't work correctly, just remove the .cache & dist folders.
 
 
 
