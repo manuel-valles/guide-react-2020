@@ -114,7 +114,23 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
 6. Effects:
     - Related to Lifecycles;
     - useEffect is scheduled during the first render;
-    - The last parameter is the list (array) of dependencies (order doesn't matter) that will make render it again. If it's not set, it will render constantly, and if you set it empty [], it will render just once (first time).
+    - The last parameter is the list (array) of dependencies (order doesn't matter) that will make it render again. If it's not set, it will render constantly, and if you set it empty [], it will render just once (first time).
+
+7. Dev Tools:
+    - Parcel takes care of the variable NODE_ENV. Development is like 4x larger and 40x slower than production;
+    - Strict Mode (<React.StrictMode></React.StrictMode>) helps you to feature prove your app, like not allowing to use things that will be sooned be deprecated. It can be 
+    ```javascript
+    const App = () => {
+        return (
+            <React.StrictMode>
+                <div>
+                    <h1 id="something-important">Adopt Me!</h1>
+                    <SearchParams />
+                </div>
+            </React.StrictMode>
+        );
+    };
+    ```
 
 
 
