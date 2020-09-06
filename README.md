@@ -111,6 +111,10 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
     - It's a destructuring array where the first one is the default value and the second is an updater function. e.g: [location, setLocation];
     - It should never go inside an if statement;
 
+6. Effects:
+    - Related to Lifecycles;
+    - useEffect is scheduled during the first render;
+    - The last parameter is the list (array) of dependencies (order doesn't matter) that will make render it again. If it's not set, it will render constantly, and if you set it empty [], it will render just once (first time).
 
 
 
