@@ -146,6 +146,22 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         "dev:mock": "cross-env PET_MOCK=mock npm run dev"
         ```
         - If it doesn't work correctly, just remove the .cache & dist folders.
+    - **Reach Router**:
+        - It is a router from one of the creators of React Router, Ryan Florence, who made a simpler, more accessible, and easier to accomplish advanced tasks like animated transitions.
+        ```javascript
+        <Router>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
+        </Router>
+        ```
+    - There is a funny Debugger Option that can be included in a component &#x1F9D0;:
+        ```javascript
+        <pre>
+            <code>{JSON.stringify(props, null, 4)}</code>
+        </pre>
+        ```
+
+9. 
 
 
 
