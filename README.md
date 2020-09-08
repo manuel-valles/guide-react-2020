@@ -166,6 +166,22 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
     - **componentDidMount** is a function that's called after the first rendering is completed (pretty similar to a *useEffect*). This is typically for the data fetching.
     - **this.props** is read-only (from parent to child).
     - **this.state** is a self-contained within a class, so you cannot modify it outside. It creates an instance that can be modified with the **this.setState({})**.
+    - A better way to instance the props is using class properties and configuring the Babel to handle it:
+        - ```$ npm install -D babel-eslint @babel/core @babel/preset-env @babel/plugin-proposal-class-properties @babel/preset-react```
+        - Create a .babelrc file with the specific presets and plugins:
+        ```json
+        {
+            "presets": ["@babel/preset-react", "@babel/preset-env"],
+            "plugins": ["@babel/plugin-proposal-class-properties"]
+        }
+        ```
+        - Add the parser option to .eslintrc.json:
+        ```json
+        "parser": "babel-eslint",
+        ```
+        
+
+
 
 
 
