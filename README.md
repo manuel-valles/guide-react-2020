@@ -179,8 +179,9 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         ```json
         "parser": "babel-eslint",
         ```
-        
-
+    - **getDerivedStateFromProps** is a special React method, that must be static, that takes a set of props and gives back a new set of states.
+    - The **unary plus operator** (+) precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't already.
+    - Whenever you're passing functions down to children or event listeners, use an arrow function to guarantee that 'this' is correct.
 
 
 
