@@ -132,7 +132,7 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
     };
     ```
 
-8. Async & Rotuing:
+8. Async & Routing:
     - Add the property 'browserlist' to the package.json, so Parcel won't use Babel to translate our async/await calls.
     ```json
     {
@@ -161,7 +161,12 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         </pre>
         ```
 
-9. 
+9. Class Components:
+    - It must have a render() method;
+    - **componentDidMount** is a function that's called after the first rendering is completed (pretty similar to a *useEffect*). This is typically for the data fetching.
+    - **this.props** is read-only (from parent to child).
+    - **this.state** is a self-contained within a class, so you cannot modify it outside. It creates an instance that can be modified with the **this.setState({})**.
+
 
 
 
