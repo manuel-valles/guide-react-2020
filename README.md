@@ -183,6 +183,27 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
     - The **unary plus operator** (+) precedes its operand and evaluates to its operand but attempts to convert it into a number, if it isn't already.
     - Whenever you're passing functions down to children or event listeners, use an arrow function to guarantee that 'this' is correct.
 
+10. Error Bounderies:
+    - Docs: https://reactjs.org/docs/error-boundaries.html);
+    - You can use Error Bounderies only with class components;
+    - They allow you to catch the API errors without crashing your app;
+    - Error boundaries only catch errors in the components below them in the tree (children). An error boundary can’t catch an error within itself. If an error boundary fails trying to render the error message, the error will propagate to the closest error boundary above it. This, too, is similar to how catch {} block works in JavaScript.
+    - **{...props}** will spread the props across the component, like *id={props.id}*
+    ```javascript
+    export default function DetailsWithErrorBoundary(props) {
+        return (
+            <ErrorBoundary>
+                <Details {...props} />
+            </ErrorBoundary>
+        );
+    }
+    ```
+    - Example to fake an error:
+    ```javascript
+    componentDidMount() {
+        throw new Error('LOL');
+    ```
+
 
 
 
