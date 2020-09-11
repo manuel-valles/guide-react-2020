@@ -242,3 +242,7 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
             )}
         </ThemeContext.Consumer>
         ```
+    - To update the Context (e.g. theme) you just need to take advantage of the fact that the Context is a Hook (*setTheme*) that lives in the App. So it will persist through navigation:
+        ```javascript
+        const [theme, setTheme] = useContext(ThemeContext);
+        ```
