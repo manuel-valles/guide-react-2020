@@ -224,3 +224,21 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
             </div>
         </ThemeContext.Provider>
       ``` 
+    - It's a bit more complex with the Classes:
+        ```javascript
+        <ThemeContext.Consumer>
+            {(themeHook) => (
+              <button style={{ backgroundColor: themeHook[0] }}>
+                Adopt {name}
+              </button>
+            )}
+        </ThemeContext.Consumer>
+        // OR
+        <ThemeContext.Consumer>
+            {([theme]) => (
+              <button style={{ backgroundColor: theme }}>
+                Adopt {name}
+              </button>
+            )}
+        </ThemeContext.Consumer>
+        ```
