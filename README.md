@@ -204,7 +204,23 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         throw new Error('LOL');
     ```
 
-
-
-
-
+11. Context:
+    - **React Context** is a stable datastore API (much easier than Redux), where you can stick anything there, like a string or a Hook.
+        ```javascript
+        // state & updater (the empty function - not doing anything so far - placeholder).
+        createContext(['green', () => {}])
+        ```
+    - You must wrap anything with the Context Component to have access to it, e.g. in the *App.js*:
+        ```javascript
+        <ThemeContext.Provider value={themeHook}>
+            <div>
+            <header>
+                <Link to="/">Adopt Me!</Link>
+            </header>
+            <Router>
+                <SearchParams path="/" />
+                <Details path="/details/:id" />
+            </Router>
+            </div>
+        </ThemeContext.Provider>
+      ``` 
