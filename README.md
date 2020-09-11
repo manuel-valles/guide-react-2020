@@ -246,3 +246,7 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
         ```javascript
         const [theme, setTheme] = useContext(ThemeContext);
         ```
+
+12. Portals:
+    - They are like separate mount points for your React app. *Modal.js* will mount a div and mount inside of the portal whenever the Modal is rendered and then remove itself whenever it's unrendered.
+    - **useRef** is used to refer to the same element across renders.
