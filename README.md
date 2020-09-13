@@ -1,6 +1,8 @@
 # React Development | Complete Course
 
-A step-by-step guide of a React course (2020) with the main tips from the Frontend Masters course: https://frontendmasters.com/courses/complete-react-v5/
+A step-by-step guide of a React course (2020) with the main tips from the two Frontend Masters courses: 
+- https://frontendmasters.com/courses/complete-react-v5/
+- https://frontendmasters.com/courses/intermediate-react-v2/ 
 
 1. Intro
 
@@ -250,3 +252,7 @@ A step-by-step guide of a React course (2020) with the main tips from the Fronte
 12. Portals:
     - They are like separate mount points for your React app. *Modal.js* will mount a div and mount inside of the portal whenever the Modal is rendered and then remove itself whenever it's unrendered.
     - **useRef** is used to refer to the same element across renders.
+
+**IMPORTANT**: From here every section will be develop in a separate branch, where the name is the one in brackets.
+
+13. CSS in JS (**emotion**)
